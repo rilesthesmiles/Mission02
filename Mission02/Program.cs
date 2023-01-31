@@ -19,13 +19,17 @@ namespace Mission02
             Console.WriteLine("Each \"*\" represents 1% of the total number of rolls.");
             Console.WriteLine("Total number of rolls = " + numberOfRolls + '\n');
 
-            // Generating random numbers between 2-12 as dice roll and added up how many times they occer
-            // for each number
+            // Generating random numbers between 1-6 as each dice roll and added up together
             for (int i = 0; i < numberOfRolls; i++)
             {
-                int randomNum = rnd.Next(2, 13);
-                diceArray[randomNum - 2] += 1;
-                
+                //int randomNum = rnd.Next(2, 13);
+                //diceArray[randomNum - 2] += 1;
+
+                int randomNumOne = rnd.Next(1, 7);
+                int randomNumTwo = rnd.Next(1, 7);
+                int combinedNumbers = randomNumOne + randomNumTwo;
+                diceArray[combinedNumbers - 2] += 1;
+
             }
      
             //Printing out each number and the percent of how many times it was rolled
